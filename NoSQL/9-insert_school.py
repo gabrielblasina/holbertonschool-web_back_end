@@ -12,6 +12,5 @@ def insert_school(mongo_collection, **kwargs):
     Return:
         the new _id
     """
-    data = {'school_data': kwargs}
-    new_data = mongo_collection.insertOne(data)
-    return new_data.inserted_id
+    data = mongo_collection.insertOne(kwargs)
+    return data.inserted_id
